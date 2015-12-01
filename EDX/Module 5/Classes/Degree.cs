@@ -21,9 +21,12 @@ namespace Module_5.Classes
         //Member Variables
         private string degreename;
         private int credits_required;
+        private Course course;
         // Public Properties
         public int Credits_Required { get { return credits_required; } set { credits_required = value; } }
         public string DegreeName { get { return degreename; } set { degreename = value; } }
+        public Course Course { get { return course; } set { course = value; } }
+
 
     }
 }

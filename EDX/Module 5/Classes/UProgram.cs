@@ -22,9 +22,11 @@ namespace Module_5.Classes
         //Member variables
         private string programname;
         private string departmenthead;
+        private Degree degree;
 
         //public propeties 
         public string PeogramName { get { return programname; } set { programname = value; } }
         public string DepartmentHead { get { return departmenthead;  } set { DepartmentHead = value; } }
+        public Degree Degree { get { return degree; } set { degree = value; } }
     }
 }
