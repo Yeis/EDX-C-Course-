@@ -15,7 +15,7 @@ namespace Module_5.Classes
         }
         public UProgram(string name ,  string departmenthead)
         {
-            this.PeogramName = name;
+            this.ProgramName = name;
             this.DepartmentHead = departmenthead;
         }
 
@@ -25,8 +25,8 @@ namespace Module_5.Classes
         private Degree degree;
 
         //public propeties 
-        public string PeogramName { get { return programname; } set { programname = value; } }
-        public string DepartmentHead { get { return departmenthead;  } set { DepartmentHead = value; } }
+        public string ProgramName { get { return programname; } set { programname = value; } }
+        public string DepartmentHead { get { return departmenthead;  } set { departmenthead = value; } }
         public Degree Degree { get { return degree; } set { degree = value; } }
     }
 }
