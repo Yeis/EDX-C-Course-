@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Module_5.Classes
+namespace Module_6.Classes
 {
     class Teacher
     {

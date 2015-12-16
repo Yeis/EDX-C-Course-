@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Module_6.Classes
 {
-    class Student
+    public class Person
     {
-        //Constructors
-        public Student()
+
+        public Person()
         {
 
         }
-        public Student(string firstname, string lastname, DateTime birthdate, string address1, string address2 , string city, string state, int zip , string country )
+        public Person(string firstname, string lastname, DateTime birthdate, string address1, string address2, string city, string state, int zip, string country)
         {
             this.FirstName = firstname;
             this.LastName = lastname;
@@ -35,6 +35,7 @@ namespace Module_6.Classes
         private string state;
         private int zipcode;
         private string country;
+
         //Properties 
         public string FirstName { get { return Firstname; } set { Firstname = value; } }
         public string LastName { get { return lastname; } set { lastname = value; } }
@@ -45,7 +46,6 @@ namespace Module_6.Classes
         public string State { get { return state; } set { state = value; } }
         public int ZipCode { get { return zipcode; } set { zipcode = value; } }
         public string Country { get { return country; } set { country = value; } }
-
 
 
     }
