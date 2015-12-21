@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Module_6.Classes
+namespace Module_8.Classes
 {
     class Student:Person
     {

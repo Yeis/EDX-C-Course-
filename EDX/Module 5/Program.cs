@@ -1,11 +1,11 @@
-﻿using Module_6.Classes;
+﻿using Module_8.Classes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Module_6
+namespace Module_8
 {
     class Program
     {

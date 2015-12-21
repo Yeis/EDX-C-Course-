@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Module_6.Classes
+namespace Module_8.Classes
 {
     class Course
     {
@@ -36,6 +36,14 @@ namespace Module_6.Classes
         public void AddTeacher(Teacher teacher)
         {
             this.Teachers.Add(teacher);
+        }
+        public void ListStudents()
+        {
+            foreach (Student student in Students)
+            {
+                var st = (Student)student;
+                Console.WriteLine("Name: {0} LastName: {1]", st.FirstName, st.LastName);
+            }
         }
     }
 }
