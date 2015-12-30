@@ -34,7 +34,7 @@ namespace Mod_9_Homework
             //ad student to the list 
             Students.Add(new Student(txtFirstName.Text, txtLastName.Text, txtCity.Text));
             MessageBox.Show("Student Created ");
-            Index = Students.Count;
+            Index = Students.Count-1;
             //Clearing TextBoxs
             txtFirstName.Clear();
             txtLastName.Clear();
@@ -43,7 +43,7 @@ namespace Mod_9_Homework
 
         private void btnNext_Click(object sender, RoutedEventArgs e)
         {
-            if (Index == Students.Count)
+            if (Index == Students.Count-1)
             {
                 Index = 0;
             }
@@ -61,9 +61,9 @@ namespace Mod_9_Homework
 
         private void btnPrevious_Click(object sender, RoutedEventArgs e)
         {
-            if (Index == 0)
+            if (Index <= 0)
             {
-                Index = Students.Count;
+                Index = Students.Count-1;
             }
             else
             {
@@ -72,7 +72,7 @@ namespace Mod_9_Homework
             //Display previous element
             txtFirstName.Text = Students[Index].FirstName;
             txtLastName.Text = Students[Index].LastName;
-            txtCity.Text = Students[Index].City
+            txtCity.Text = Students[Index].City;
         }
     }
 }
