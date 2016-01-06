@@ -16,20 +16,22 @@ namespace RestrictionOperators
 
             //Comment or uncomment the method calls below to run or not
 
-              //samples.Linq1(); // This sample  uses the where clause  to find all elements  of an array with a value 
+             // samples.Linq1(); // This sample  uses the where clause  to find all elements  of an array with a value 
                                // less than 5
 
             //samples.Linq2(); // This sample uses the where clause to find all products that are out of stock
 
-            //samples.Linq3(); // This sample uses the where clause to find all products that are in  stock and cost 
-                               // more than 3.00 per unit
+             // samples.Linq3(); // This sample uses the where clause to find all products that are in  stock and cost 
+            // more than 3.00 per unit
 
-            //samples.Linq4(); // This sample uses the where  clause to find all customers in Washington and then it 
-                               // uses a foreach loop to iterate over the orders collection that belongs to each 
-                               // customer
+             samples.Linq4(); // This sample uses the where  clause to find all customers in Washington and then it 
+            // uses a foreach loop to iterate over the orders collection that belongs to each 
+            // customer
 
             //samples.Linq5(); // This sample demonstrates an indexed where clause that returns digits whose name is 
-                               // shorter than their value
+            // shorter than their value
+
+            Console.ReadLine();
         }
 
         public class Product
@@ -106,13 +108,16 @@ namespace RestrictionOperators
             public void Linq3()
             {
                 List<Product> products = GetProductList();
-
                 //TODO: Create code to implement the functionality listed in the [Description] tag for this query
-
+                var expensiveInStockProducts = from prod in products
+                                               where prod.UnitsInStock > 0
+                                               where prod.UnitPrice > 3
+                                               select prod;
                 Console.WriteLine("In-stock products that cost more than 3.00:");
                 foreach (var product in expensiveInStockProducts)
                 {
                     Console.WriteLine("{0} is in stock and costs more than 3.00.", product.ProductName);
+
                 }
             }
 
@@ -123,12 +128,12 @@ namespace RestrictionOperators
                 List<Customer> customers = GetCustomerList();
 
                 //TODO: Create code to implement the functionality listed in the [Description] tag for this query
-
+                var waCustomers = from C in customers where C.Region == "WA" select C;
                 Console.WriteLine("Customers from Washington and their orders:");
                 foreach (var customer in waCustomers)
                 {
                     Console.WriteLine("Customer {0}: {1}", customer.CustomerID, customer.CompanyName);
-                    foreach (var order in customer.Orders)
+                   foreach (var order in customer.Orders)
                     {
                         Console.WriteLine("  Order {0}: {1}", order.OrderID, order.OrderDate);
                     }
